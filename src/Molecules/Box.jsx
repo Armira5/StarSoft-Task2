@@ -5,12 +5,14 @@ import TickIcon from "../Atoms/TickIcon";
 
 const Box = ({ title, price, features }) => {
   return (
-    <div className="box-wrapper bg-white rounded-xl p-8 shadow-lg mx-4 mb-4 ">
+    <div className="box-wrapper bg-white rounded-l rounded-r p-8 shadow-lg  mb-4 text-color-black">
       <h2 className="text-center">{title}</h2>
-      <p className="text-center">${price} / month</p>
-      <ul className="flex flex-col items-center">
+      <p className="text-center flex">
+        ${price} <p>/ month</p>
+      </p>
+      <ul className="flex flex-col ">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
+          <li key={index} className="flex ">
             <TickIcon /> {feature}
           </li>
         ))}
